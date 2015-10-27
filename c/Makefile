@@ -10,9 +10,9 @@ builddir=build
 
 # Executable: main
 incl_main=
-objs_main=$(builddir)/main.o $(builddir)/calculator.o
+objs_main=$(builddir)/main_dojo.o $(builddir)/calculator.o
 libs_main=
-exec_main=$(builddir)/main
+exec_main=$(builddir)/main_dojo
 
 # Executable: check/tests
 incl_check=
@@ -45,7 +45,7 @@ $(builddir)/%.o:
 
 # Source mappings
 $(builddir)/calculator.o: $(srcdir)/dojo/calculator.c
-$(builddir)/main.o: $(srcdir)/main.c
+$(builddir)/main_dojo.o: $(srcdir)/main_dojo.c
 $(builddir)/main_tests.o: $(testdir)/main_tests.c
 
 $(exec_main): $(objs_main)
